@@ -20,6 +20,7 @@ public class Act1 extends AppCompatActivity implements View.OnClickListener {
     Button BtMinus;
     Button BtNext;
     Button BtMul;
+    Button BtDiv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +32,12 @@ public class Act1 extends AppCompatActivity implements View.OnClickListener {
         BtPlus = (Button) findViewById(R.id.BtPlus);
         BtMinus = (Button) findViewById(R.id.BtMinus);
         BtMul = (Button) findViewById(R.id.BtMul);
+        BtDiv = (Button) findViewById(R.id.BtDiv);
         BtNext = (Button) findViewById(R.id.BtNext);
         BtPlus.setOnClickListener(this);
         BtMinus.setOnClickListener(this);
         BtMul.setOnClickListener(this);
+        BtDiv.setOnClickListener(this);
         BtNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +68,12 @@ public class Act1 extends AppCompatActivity implements View.OnClickListener {
             int Num1 = Integer.parseInt(EtN1.getText().toString());
             int Num2 = Integer.parseInt(EtN2.getText().toString());
             TvRes.setText("Πολλαπλασιαμός: " + (Num1 * Num2));
+        }
+
+        if (v == BtDiv) {
+            int Num1 = Integer.parseInt(EtN1.getText().toString());
+            int Num2 = Integer.parseInt(EtN2.getText().toString());
+            TvRes.setText("Διαίρεση: " + (Num1 / Num2));
         }
     }
 
