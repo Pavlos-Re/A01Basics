@@ -52,12 +52,6 @@
             android:inputType="number"
             android:autoText="true"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ο.Κ."
-            android:id="@+id/BtDoIt"
-            android:layout_marginTop="5dp"/>
     </LinearLayout>
 
     <ScrollView
